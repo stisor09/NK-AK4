@@ -1,0 +1,51 @@
+import serial
+import time
+import getpass
+
+
+def send_command(cmd, wait=1):
+        ser.write(cmd.encode('utf-8') + b'\r\n')
+        time.sleep(wait)
+        output = ser.read(ser.in_waiting).decode('utf-8', errors='ignore')
+        print (output)
+serial_port= input('Enter used serial port (/dev/ttyS* or COM*: ')
+
+try:
+        ser = serial.Serial(port=serial_port, baudrate=9600, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOP>        print('Serial connection works')
+except Exception as e:
+        print('Serial connection failed')
+        exit(1)
+
+username= input('Enter new username: ')
+password= getpass.getpass('Enter new password: ')
+hostname= input('Enter new hostname: ')
+vlanface= input('Enter new VLAN interface for management: ')
+address = input('Enter new IP + mask address: ')
+domain  = input('Enter new device domain: ')
+crypto  = input('Enter new crypto key bit size: ')
+
+if ser.is_open:
+	        print('Connected')
+
+        send_command('\n')
+        send_command('enable')
+        send_command('conf t')
+        send_command('ip domain name ' + domain)
+        send_command('hostname ' + hostname)
+        send_command('crypto key generate rsa modulus ' + crypto)
+        send_command('username ' + username + 'secret ' + password)
+        send_command('enable secret ' + password)
+        send_command('line vty 0 4')
+        send_command('transport input ssh')
+        send_command('login local')
+        send_command('exit')
+        send_command('ip ssh version 2')
+        send_command('interface vlan ' + vlanface)
+        send_command('ip add ' + address)
+        send_command('no shutdown')
+        send_command('exit')
+        send_command('vlan ' + vlanface)
+        send_command('exit')
+
+        print('Config complete')
+        ser.close()

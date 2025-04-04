@@ -1,0 +1,99 @@
+import serial
+import time
+import getpass
+
+
+def send_command(cmd, wait=1):
+        ser.write(cmd.encode('utf-8') + b'\r\n')
+        time.sleep(wait)
+        output = ser.read(ser.in_waiting).decode('utf-8', errors='ignore')
+        print (output)
+
+serial_port = input('Enter used serial port /dev/ttyS* or COM*: ')
+
+try:
+        ser = serial.Serial(port=serial_port, baudrate=9600, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
+        print('Serial connection works')
+except Exception as e:
+        print('Serial connection failed')
+        exit(1)
+
+username = input('Enter new username: ')
+password = getpass.getpass('Enter new password: ')
+hostname = input('Enter new hostname (RouterX): ')
+interface_lan = input('Enter your device LAN interface(and/or subinterface): ')
+address_LAN = input('Enter new IP + mask address for the LAN port: ')
+interface_wan = input('Enter your device WAN interface(and/or subinterface): ')
+address_WAN = input('Enter new IP + mask address for the WAN port: ')
+domain = input('Enter new device domain: ')
+crypto = input('Enter new crypto key bit size: ')
+routerid= input('Enter your OSPF router ID (x.x.x.x): ')
+ospf1   = input('Input your first OSPF network command for routing (network NetID area X or press enter to skip): ')
+ospf2   = input('Input your second OSPF network command for routing (network NetID area X or press enter to skip): ')
+ospf3   = input('Input your last OSPF network command for routing (network NetID area X or press enter to skip): ')
+
+lan_subinterfaces = []
+
+while True:
+	interface_lan = input('Enter your LAN interface (e.g., Gig0/0/1.10): ')
+	address_LAN = input('Enter IP + mask address for this LAN subinterface: ')
+	use_dot1q = False
+	encapsulation = ''
+
+	if "." in interface_lan or "vlan" in interface_lan.lower():
+		encap_choice = input('Use dot1Q encapsulation? (y/n): ').lower()
+		use_dot1q = encap_choice == 'y'
+		if use_dot1q:
+			encapsulation = input('Enter VLAN ID for dot1Q encapsulation: ')
+
+	lan_subinterfaces.append((interface_lan, address_LAN, use_dot1q, encapsulation))
+
+	another = input('Add another LAN subinterface? (y/n): ').lower()
+	if another != 'y':
+		break
+
+if ser.is_open:
+	print('Connected')
+
+	send_command('\n')
+	send_command('enable')
+	send_command('conf t')
+	send_command('ip domain name ' + domain)
+	send_command('hostname ' + hostname)
+	send_command('crypto key generate rsa modulus ' + crypto)
+	send_command('username ' + username + ' secret ' + password)
+	send_command('enable secret ' + password)
+	send_command(' line vty 0 4')
+	send_command('transport input ssh')
+	send_command('login local')
+	send_command('exit')
+	send_command('ip ssh version 2')
+
+	for iface, ip, use_encap, vlan_id in lan_subinterfaces:
+		send_command('interface ' + iface)
+		if use_encap:
+			send_command('encapsulation dot1q ' + vlan_id)
+		send_command('ip address ' + ip)
+		send_command('no shutdown')
+		send_command('exit')
+
+	send_command('interface ' + interface_wan)
+	send_command('ip add ' + address_WAN)
+	send_command('no shutdown')
+	send_command('exit')
+
+	send_command('ip routing')
+	send_command('router ospf 1')
+	send_command('router-id '+ routerid)
+	send_command('log-adjacency-changes')
+	if ospf1:
+		send_command(ospf1)
+	if ospf2:
+		send_command(ospf2)
+	if ospf3:
+		send_command(ospf3)
+	send_command('exit')
+	send_command('exit')
+	print('Config complete')
+	ser.close()
+

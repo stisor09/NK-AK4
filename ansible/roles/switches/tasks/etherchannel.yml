@@ -1,0 +1,13 @@
+- name: Configure Etherchannel Layer2Switch2 to external
+  hosts: Layer2Switch2
+  collections:
+    - cisco.ios
+  tasks:
+    - name: Etherchannel
+      ios_config:
+        lines:
+          - interface range fastethernet0/10-11
+          - channel-group 1 mode active
+          - interface port-channel1
+          - switchport mode trunk
+          - switch trunk allowed vlan 10,20,99

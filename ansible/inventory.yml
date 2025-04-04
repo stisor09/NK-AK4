@@ -1,0 +1,30 @@
+all:
+  children:
+    switches:
+      hosts:
+        Layer2Switch1:
+          ansible_host: 192.168.99.50
+          ansible_user: cisco
+          ansible_password: cisco
+          ansible_network_os: cisco.ios.ios
+          ansible_connection: network_cli
+        Layer2Switch2:
+          ansible_host: 192.168.99.51
+          ansible_user: cisco
+          ansible_password: cisco
+          ansible_network_os: cisco.ios.ios
+          ansible_connection: network_cli
+    routers:
+      hosts:
+        Router1:
+          ansible_host: 192.168.99.1
+          ansible_user: cisco
+          ansible_password: cisco
+          ansible_network_os: cisco.ios.ios
+          ansible_connection: network_cli
+        Router2:
+          ansible_host: 192.168.99.2
+          ansible_user: cisco
+          ansible_password: cisco
+          ansible_network_os: cisco.ios.ios
+          ansible_connection: network_cli

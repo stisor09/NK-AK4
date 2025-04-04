@@ -1,0 +1,84 @@
+2025-03-12 09:12:39,962 p=1574 u=cisco n=ansible | [WARNING]: Unable to parse /home/cisco/ansible/hosts as an inventory source
+
+2025-03-12 09:12:39,962 p=1574 u=cisco n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-03-12 09:12:39,964 p=1574 u=cisco n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2025-03-12 09:12:39,964 p=1574 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: cisco_routers
+
+2025-03-12 09:17:23,023 p=1702 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:17:23,024 p=1702 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:17:23,192 p=1702 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:17:23,295 p=1712 u=cisco n=ansible | shutdown complete
+2025-03-12 09:40:19,909 p=2216 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:40:19,910 p=2216 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:40:20,061 p=2216 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:40:20,163 p=2226 u=cisco n=ansible | shutdown complete
+2025-03-12 09:40:41,499 p=2248 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2025-03-12 09:40:41,499 p=2248 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-03-12 09:40:48,758 p=2252 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:40:48,759 p=2252 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:40:48,765 p=2252 u=cisco n=ansible | 192.168.0.1 | FAILED! => {
+    "msg": "The module router was not found in configured module paths"
+}
+2025-03-12 09:40:48,866 p=2262 u=cisco n=ansible | shutdown complete
+2025-03-12 09:41:04,670 p=2276 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2025-03-12 09:41:04,670 p=2276 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-03-12 09:41:19,451 p=2282 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:41:19,452 p=2282 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:41:19,596 p=2282 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:41:19,699 p=2292 u=cisco n=ansible | shutdown complete
+2025-03-19 08:13:42,224 p=129 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-19 08:13:42,225 p=129 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-19 08:13:42,501 p=129 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 08:13:42,606 p=139 u=cisco n=ansible | shutdown complete
+2025-03-19 08:20:26,687 p=186 u=cisco n=ansible | Starting galaxy collection install process
+2025-03-19 08:20:26,869 p=186 u=cisco n=ansible | Nothing to do. All requested collections are already installed. If you want to reinstall them, consider using `--force`.
+2025-03-19 14:23:01,638 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,638 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,639 p=718 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-19 14:23:01,639 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,745 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,943 p=718 u=cisco n=ansible | router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,044 p=718 u=cisco n=ansible | router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,053 p=718 u=cisco n=ansible | layer2_switch | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,054 p=718 u=cisco n=ansible | layer2_switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,167 p=776 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=745 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=746 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=744 u=cisco n=ansible | shutdown complete

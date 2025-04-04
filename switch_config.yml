@@ -1,0 +1,46 @@
+- name:  Configure Layer 2 switches
+  hosts:  Layer2_Switches
+  gather_facts: no
+  tasks:
+    - name:  create MGMT VLAN
+      cisco.ios_ios_config:
+        lines:
+          - vlan 99
+          - name MGMT
+          - vlan 10
+          - name vlan10
+      when: inventory_hostname == "Layer2_Switch1" or inventory_hostname== "Layer2_Switch2"
+    - name:  Set IP for MGMT on Switch1
+      cisco.ios.ios_config:
+        parents: interface vlan 99
+        lines:
+          -  ip address 192.168.99.50 255.255.255.0
+          -  no shutdown
+      when: inventory_hostname == "Layer2_Switch1"
+
+    - name: Set IP for MGMT on Switch2
+      cisco.ios.ios_config:
+        parents: interface vlan 99
+        lines:
+          - ip add  192.168.99.51 25.255.255.0
+          - no shutdown
+      when:  inventory_hostname == "Layer2_Switch2"
+
+    - name:  Trunk ports
+      cisco.ios.ios_config:
+        parents: interface
+        lines:
+          -  switchport mode
+          -  switchport trunk allow vlan 
+        parents: interface
+        lines:
+          -  switchport mode
+          -  
+        parents: interface
+        lines:
+          -  switchport mode
+          -  
+        parents: interface
+        lines:
+          -  switchport mode
+          -  

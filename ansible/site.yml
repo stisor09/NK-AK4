@@ -1,0 +1,6 @@
+- import_playbook: roles/routers/tasks/hsrp.yml
+- import_playbook: roles/routers/tasks/ospf.yml
+- import_playbook: roles/routers/tasks/dhcp.yml
+- import_playbook: roles/switches/tasks/vlan.yml
+- import_playbook: roles/switches/tasks/port_config.yml
+- import_playbook: roles/switches/tasks/etherchannel.yml

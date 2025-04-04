@@ -1,0 +1,18 @@
+- name: Configure DHCP on Routers
+  hosts: routers
+  gather_facts: no
+  collections:
+    - cisco.ios
+  tasks:
+    - name: Configure DHCP pool for Vlan 10
+      ios_config:
+        parents: ip dhcp pool Nettverk10
+        lines:
+          - network 192.168.0.0 255.255.255.0
+          - default-router 192.168.0.3
+
+    - name: Exclude IPs from DHCP pool
+      ios_config:
+        lines:
+          - ip dhcp excluded-address 192.168.0.1 192.168.0.3
+

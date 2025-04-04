@@ -1,0 +1,30 @@
+- name: HSRP config
+  hosts: routers
+  tasks:
+   - name: IP and HSRP config for the subinterfaces
+     ios_config:
+       parents: interface GigabitEthernet0/0/1.10
+       lines:
+         - encapsulation dot1q 10
+         - ip address {{'192.168.0.1' if inventory_hostname == 'Router1' else '192.168.0.2' }} 255.255.255.0
+         - standby 1 ip 192.168.0.3
+         - standby 1 priority {{'110' if inventory_hostname == 'Router1' else '105'}}
+
+
+   - name: Set standby 1 preempt (only on Router1)
+     when: inventory_hostname == 'Router1'
+     ios_config:
+      parents: interface GigabitEthernet0/0/1.10
+      lines:
+       - standby 1 preempt
+
+
+   - name: IP and HSRP for administrative
+     ios_config:
+       parents: interface GigabitEthernet0/0/1.99
+       lines:
+          - encapsulation dot1q 99
+          - ip address {{'192.168.99.1' if inventory_hostname == 'Router1' else '192.168.99.2' }} 255.255.255.0
+          - standby 99 ip 192.168.99.3
+          - standby 99 priority {{'110' if inventory_hostname == 'Router1' else '100'}}
+

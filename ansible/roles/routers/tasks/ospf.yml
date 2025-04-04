@@ -1,0 +1,24 @@
+- name: Configure OSPF on Routers
+  hosts: routers
+  gather_facts: no
+  collections:
+    - cisco.ios
+  tasks:
+    - name: Configure OSPF for Router1
+      when: inventory_hostname == 'router1'
+      ios_config:
+        lines:
+          - router ospf 1
+          - network 192.168.0.0 0.0.0.255 area 2
+          - network 192.168.99.0 0.0.0.255 area 2
+          - network 10.0.0.0 0.0.0.3 area 0
+
+    - name: Configure OSPF for Router2
+      when: inventory_hostname == 'router2'
+      ios_config:
+        lines:
+          - router ospf 1
+          - network 192.168.0.0 0.0.0.255 area 2
+          - network 192.168.99.0 0.0.0.255 area 2
+          - network 10.0.0.4 0.0.0.3 area 0
+

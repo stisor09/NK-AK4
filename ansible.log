@@ -1,0 +1,649 @@
+2025-03-12 09:12:39,962 p=1574 u=cisco n=ansible | [WARNING]: Unable to parse /home/cisco/ansible/hosts as an inventory source
+
+2025-03-12 09:12:39,962 p=1574 u=cisco n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-03-12 09:12:39,964 p=1574 u=cisco n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2025-03-12 09:12:39,964 p=1574 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: cisco_routers
+
+2025-03-12 09:17:23,023 p=1702 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:17:23,024 p=1702 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:17:23,192 p=1702 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:17:23,295 p=1712 u=cisco n=ansible | shutdown complete
+2025-03-12 09:40:19,909 p=2216 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:40:19,910 p=2216 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:40:20,061 p=2216 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:40:20,163 p=2226 u=cisco n=ansible | shutdown complete
+2025-03-12 09:40:41,499 p=2248 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2025-03-12 09:40:41,499 p=2248 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-03-12 09:40:48,758 p=2252 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:40:48,759 p=2252 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:40:48,765 p=2252 u=cisco n=ansible | 192.168.0.1 | FAILED! => {
+    "msg": "The module router was not found in configured module paths"
+}
+2025-03-12 09:40:48,866 p=2262 u=cisco n=ansible | shutdown complete
+2025-03-12 09:41:04,670 p=2276 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2025-03-12 09:41:04,670 p=2276 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-03-12 09:41:19,451 p=2282 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-12 09:41:19,452 p=2282 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-12 09:41:19,596 p=2282 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-12 09:41:19,699 p=2292 u=cisco n=ansible | shutdown complete
+2025-03-19 08:13:42,224 p=129 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-03-19 08:13:42,225 p=129 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-19 08:13:42,501 p=129 u=cisco n=ansible | 192.168.0.1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 08:13:42,606 p=139 u=cisco n=ansible | shutdown complete
+2025-03-19 08:20:26,687 p=186 u=cisco n=ansible | Starting galaxy collection install process
+2025-03-19 08:20:26,869 p=186 u=cisco n=ansible | Nothing to do. All requested collections are already installed. If you want to reinstall them, consider using `--force`.
+2025-03-19 14:23:01,638 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,638 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,639 p=718 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-19 14:23:01,639 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,745 p=718 u=cisco n=ansible | network_os is set to ios
+2025-03-19 14:23:01,943 p=718 u=cisco n=ansible | router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,044 p=718 u=cisco n=ansible | router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,053 p=718 u=cisco n=ansible | layer2_switch | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,054 p=718 u=cisco n=ansible | layer2_switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-19 14:23:02,167 p=776 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=745 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=746 u=cisco n=ansible | shutdown complete
+2025-03-19 14:23:02,168 p=744 u=cisco n=ansible | shutdown complete
+2025-03-26 15:39:08,661 p=1538 u=cisco n=ansible | [WARNING]: While constructing a mapping from /home/cisco/ansible/ansible/site.yml, line 1, column 1, found a duplicate dict key (import_playbook). Using
+last defined value only.
+
+2025-03-26 15:39:08,664 p=1538 u=cisco n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/cisco/ansible/ansible/site.yml
+
+The error appears to be in '/home/cisco/ansible/ansible/site.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+import_playbook: roles/routers/tasks/hsrp.yml
+^ here
+
+2025-03-26 15:42:25,798 p=1544 u=cisco n=ansible | network_os is set to ios
+2025-03-26 15:42:25,799 p=1544 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-03-26 15:42:25,801 p=1544 u=cisco n=ansible | network_os is set to ios
+2025-03-26 15:42:25,854 p=1544 u=cisco n=ansible | network_os is set to ios
+2025-03-26 15:42:25,916 p=1544 u=cisco n=ansible | network_os is set to ios
+2025-03-26 15:42:26,123 p=1544 u=cisco n=ansible | Layer2Switch1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-26 15:42:26,240 p=1544 u=cisco n=ansible | Layer2Switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-26 15:42:26,241 p=1544 u=cisco n=ansible | Router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-26 15:42:26,243 p=1544 u=cisco n=ansible | Router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-26 15:42:26,356 p=1567 u=cisco n=ansible | shutdown complete
+2025-03-26 15:42:26,356 p=1569 u=cisco n=ansible | shutdown complete
+2025-03-26 15:42:26,357 p=1593 u=cisco n=ansible | shutdown complete
+2025-03-26 15:42:26,357 p=1572 u=cisco n=ansible | shutdown complete
+2025-03-26 15:42:59,262 p=1682 u=cisco n=ansible | [WARNING]: While constructing a mapping from /home/cisco/ansible/ansible/site.yml, line 1, column 1, found a duplicate dict key (import_playbook). Using
+last defined value only.
+
+2025-03-26 15:42:59,266 p=1682 u=cisco n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/cisco/ansible/ansible/site.yml
+
+The error appears to be in '/home/cisco/ansible/ansible/site.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+import_playbook: roles/routers/tasks/hsrp.yml
+^ here
+
+2025-03-26 15:46:13,964 p=1693 u=cisco n=ansible | ERROR! the playbook: site.yml could not be found
+2025-03-26 15:46:32,136 p=1700 u=cisco n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2025-04-02 10:31:07,013 p=2164 u=cisco n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2025-04-02 10:35:12,571 p=2190 u=cisco n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2025-04-02 10:37:17,639 p=2206 u=cisco n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2025-04-02 10:38:06,458 p=2222 u=cisco n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2025-04-02 10:42:32,516 p=2309 u=cisco n=ansible | [WARNING]: errors were encountered during the plugin load for ios.config: ['ios.config is not a valid collection
+reference']
+
+2025-04-02 10:42:32,518 p=2309 u=cisco n=ansible | ERROR! couldn't resolve module/action 'ios.config'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: OSPF config for the 2 routers
+      ^ here
+
+2025-04-02 10:45:04,949 p=2368 u=cisco n=ansible | [WARNING]: errors were encountered during the plugin load for ios.config: ['ios.config is not a valid collection
+reference']
+
+2025-04-02 10:45:04,951 p=2368 u=cisco n=ansible | ERROR! couldn't resolve module/action 'ios.config'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: OSPF config for the 2 routers
+      ^ here
+
+2025-04-02 10:45:44,951 p=2378 u=cisco n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 7, column 18, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: OSPF config for the 2 routers
+       ios.config:
+                 ^ here
+
+2025-04-02 10:46:32,947 p=2385 u=cisco n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 7, column 17, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    -name: OSPF config for the 2 routers
+      ios.config:
+                ^ here
+
+2025-04-02 10:46:59,651 p=2391 u=cisco n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 7, column 16, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    -name: OSPF config for the 2 routers
+     ios.config:
+               ^ here
+
+2025-04-02 10:54:34,202 p=4044 u=cisco n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/cisco/ansible/ansible/roles/routers/tasks/ospf.yml': line 7, column 16, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    -name: OSPF config for the 2 routers
+     ios.config:
+               ^ here
+
+2025-04-02 10:57:55,145 p=4092 u=cisco n=ansible | PLAY [HSRP config. on routers] *****************************************************************************************
+2025-04-02 10:57:55,261 p=4092 u=cisco n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-04-02 10:57:55,866 p=4092 u=cisco n=ansible | network_os is set to ios
+2025-04-02 10:57:55,867 p=4092 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 10:57:55,986 p=4092 u=cisco n=ansible | network_os is set to ios
+2025-04-02 10:57:56,683 p=4106 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 10:57:56,717 p=4092 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 10:57:56,799 p=4118 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 10:57:56,831 p=4092 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 10:57:56,832 p=4092 u=cisco n=ansible | PLAY RECAP *************************************************************************************************************
+2025-04-02 10:57:56,832 p=4092 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 10:57:56,832 p=4092 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 10:58:26,687 p=4106 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 10:58:26,789 p=4106 u=cisco n=ansible | shutdown complete
+2025-04-02 10:58:26,803 p=4118 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 10:58:26,905 p=4118 u=cisco n=ansible | shutdown complete
+2025-04-02 11:03:56,604 p=4342 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:03:56,706 p=4342 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:03:57,407 p=4342 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:03:57,407 p=4342 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:03:57,408 p=4342 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:03:58,173 p=4359 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:03:58,208 p=4342 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:03:58,489 p=4358 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:03:58,518 p=4342 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "paramiko is not installed: No module named 'paramiko'"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:03:58,519 p=4342 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:03:58,519 p=4342 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:03:58,519 p=4342 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:04:28,176 p=4359 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:04:28,278 p=4359 u=cisco n=ansible | shutdown complete
+2025-04-02 11:04:28,492 p=4358 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:04:28,593 p=4358 u=cisco n=ansible | shutdown complete
+2025-04-02 11:11:14,381 p=4682 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: version
+
+2025-04-02 11:11:14,381 p=4682 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-04-02 11:11:14,386 p=4682 u=cisco n=ansible | ERROR! No argument passed to command module
+2025-04-02 11:14:56,476 p=5172 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:14:56,572 p=5172 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:14:57,058 p=5172 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:14:57,059 p=5172 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:14:57,182 p=5172 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:14:57,956 p=5186 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:14:57,967 p=5198 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:15:11,040 p=5172 u=cisco n=ansible |  [ERROR]: User interrupted execution
+
+2025-04-02 11:15:19,086 p=5198 u=cisco n=ansible | shutdown complete
+2025-04-02 11:15:19,086 p=5186 u=cisco n=ansible | shutdown complete
+2025-04-02 11:16:00,949 p=5222 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:16:01,047 p=5222 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:16:01,531 p=5222 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:16:01,532 p=5222 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:16:01,659 p=5222 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:16:02,336 p=5236 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:16:02,336 p=5248 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:16:02,342 p=5248 u=cisco n=p=5248 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:16:02,342 p=5236 u=cisco n=p=5236 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:16:04,616 p=5236 u=cisco n=p=5236 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:16:04,618 p=5248 u=cisco n=p=5248 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-02 11:16:04,618 p=5236 u=cisco n=p=5236 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:16:04,619 p=5248 u=cisco n=p=5248 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:16:04,653 p=5222 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:16:04,763 p=5222 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:16:04,764 p=5222 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:16:04,764 p=5222 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:16:04,764 p=5222 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:16:17,124 p=5284 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:16:17,219 p=5284 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:16:17,707 p=5284 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:16:17,708 p=5284 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:16:17,717 p=5284 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:16:18,509 p=5301 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:16:18,515 p=5301 u=cisco n=p=5301 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:16:18,614 p=5298 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:16:18,620 p=5298 u=cisco n=p=5298 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:16:20,791 p=5301 u=cisco n=p=5301 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-02 11:16:20,793 p=5301 u=cisco n=p=5301 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:16:20,826 p=5284 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:16:20,894 p=5298 u=cisco n=p=5298 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:16:20,895 p=5298 u=cisco n=p=5298 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:16:20,927 p=5284 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:16:20,927 p=5284 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:16:20,928 p=5284 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:16:20,928 p=5284 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:16:34,622 p=5236 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:16:34,624 p=5248 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:16:34,724 p=5236 u=cisco n=ansible | shutdown complete
+2025-04-02 11:16:34,726 p=5248 u=cisco n=ansible | shutdown complete
+2025-04-02 11:16:50,798 p=5301 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:16:50,899 p=5301 u=cisco n=ansible | shutdown complete
+2025-04-02 11:16:50,900 p=5298 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:16:51,002 p=5298 u=cisco n=ansible | shutdown complete
+2025-04-02 11:18:49,797 p=5381 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: site.yml
+
+2025-04-02 11:18:49,797 p=5381 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-04-02 11:19:06,196 p=5396 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: inventory.yml
+
+2025-04-02 11:19:06,197 p=5396 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-04-02 11:20:35,838 p=5417 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:20:35,839 p=5417 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:20:35,938 p=5417 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:20:36,146 p=5417 u=cisco n=ansible | Layer2Switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:20:36,147 p=5417 u=cisco n=ansible | Layer2Switch1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:20:36,256 p=5431 u=cisco n=ansible | shutdown complete
+2025-04-02 11:20:36,256 p=5443 u=cisco n=ansible | shutdown complete
+2025-04-02 11:20:45,942 p=5477 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:20:45,943 p=5477 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:20:45,956 p=5477 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:20:46,241 p=5477 u=cisco n=ansible | Router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:20:46,241 p=5477 u=cisco n=ansible | Router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:20:46,350 p=5491 u=cisco n=ansible | shutdown complete
+2025-04-02 11:20:46,351 p=5494 u=cisco n=ansible | shutdown complete
+2025-04-02 11:21:06,496 p=5537 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:21:06,497 p=5537 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:21:06,703 p=5537 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:21:07,025 p=5537 u=cisco n=ansible | Layer2Switch1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:21:07,025 p=5537 u=cisco n=ansible | Layer2Switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:21:07,133 p=5563 u=cisco n=ansible | shutdown complete
+2025-04-02 11:21:07,134 p=5551 u=cisco n=ansible | shutdown complete
+2025-04-02 11:21:11,765 p=5597 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:21:11,766 p=5597 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:21:12,054 p=5597 u=cisco n=ansible | Router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:21:12,107 p=5597 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:21:12,283 p=5597 u=cisco n=ansible | Router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:21:12,392 p=5611 u=cisco n=ansible | shutdown complete
+2025-04-02 11:21:12,392 p=5630 u=cisco n=ansible | shutdown complete
+2025-04-02 11:24:12,383 p=5660 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:24:12,384 p=5660 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:24:12,507 p=5660 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:24:12,678 p=5660 u=cisco n=ansible | Router1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:24:12,691 p=5660 u=cisco n=ansible | Router2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:24:12,800 p=5686 u=cisco n=ansible | shutdown complete
+2025-04-02 11:24:12,800 p=5674 u=cisco n=ansible | shutdown complete
+2025-04-02 11:27:20,052 p=5748 u=cisco n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: Layer2Switch
+
+2025-04-02 11:27:20,053 p=5748 u=cisco n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2025-04-02 11:27:26,489 p=5752 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:27:26,490 p=5752 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:27:26,991 p=5752 u=cisco n=ansible | Layer2Switch1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:27:27,096 p=5762 u=cisco n=ansible | shutdown complete
+2025-04-02 11:27:39,072 p=5784 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:27:39,073 p=5784 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:27:39,455 p=5784 u=cisco n=ansible | Layer2Switch1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:27:39,560 p=5794 u=cisco n=ansible | shutdown complete
+2025-04-02 11:27:44,715 p=5816 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:27:44,716 p=5816 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:27:44,991 p=5816 u=cisco n=ansible | Layer2Switch2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-02 11:27:45,096 p=5826 u=cisco n=ansible | shutdown complete
+2025-04-02 11:27:56,291 p=5859 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:27:56,386 p=5859 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:27:56,868 p=5859 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:27:56,869 p=5859 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:27:56,994 p=5859 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:27:57,667 p=5885 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:27:57,673 p=5873 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:27:57,705 p=5859 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "[Errno None] Unable to connect to port 22 on 192.168.99.2"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:27:57,711 p=5859 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "[Errno None] Unable to connect to port 22 on 192.168.99.1"}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:27:57,711 p=5859 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:27:57,712 p=5859 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:27:57,712 p=5859 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:28:15,024 p=5917 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:28:15,121 p=5917 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:28:15,613 p=5917 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:28:15,614 p=5917 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:28:15,720 p=5917 u=cisco n=ansible | network_os is set to ios
+2025-04-02 11:28:16,619 p=5931 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:28:16,626 p=5931 u=cisco n=p=5931 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:28:16,737 p=5935 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:28:16,742 p=5935 u=cisco n=p=5935 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:28:18,903 p=5931 u=cisco n=p=5931 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-02 11:28:18,905 p=5931 u=cisco n=p=5931 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:28:18,937 p=5917 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:28:19,017 p=5935 u=cisco n=p=5935 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:28:19,019 p=5935 u=cisco n=p=5935 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:28:19,050 p=5917 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: ansible.legacy.ios_facts\n"}
+2025-04-02 11:28:19,051 p=5917 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:28:19,051 p=5917 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:28:19,051 p=5917 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:28:27,673 p=5885 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:28:27,679 p=5873 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:28:27,776 p=5885 u=cisco n=ansible | shutdown complete
+2025-04-02 11:28:27,781 p=5873 u=cisco n=ansible | shutdown complete
+2025-04-02 11:28:48,909 p=5931 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:28:49,011 p=5931 u=cisco n=ansible | shutdown complete
+2025-04-02 11:28:49,023 p=5935 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:28:49,125 p=5935 u=cisco n=ansible | shutdown complete
+2025-04-02 11:30:27,571 p=5997 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:30:27,672 p=5997 u=cisco n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************
+2025-04-02 11:30:28,259 p=5997 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:30:28,260 p=5997 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:30:28,476 p=5997 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:30:29,165 p=6011 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:30:29,171 p=6011 u=cisco n=p=6011 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:30:29,278 p=6023 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:30:29,284 p=6023 u=cisco n=p=6023 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:30:31,447 p=6011 u=cisco n=p=6011 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-02 11:30:31,449 p=6011 u=cisco n=p=6011 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:30:31,482 p=5997 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"cisco.ios.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: cisco.ios.ios_facts\n"}
+2025-04-02 11:30:31,559 p=6023 u=cisco n=p=6023 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:30:31,561 p=6023 u=cisco n=p=6023 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:30:31,593 p=5997 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"cisco.ios.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: cisco.ios.ios_facts\n"}
+2025-04-02 11:30:31,597 p=5997 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:30:31,598 p=5997 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:30:31,598 p=5997 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:31:01,453 p=6011 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:31:01,554 p=6011 u=cisco n=ansible | shutdown complete
+2025-04-02 11:31:01,565 p=6023 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-02 11:31:01,667 p=6023 u=cisco n=ansible | shutdown complete
+2025-04-02 11:33:55,447 p=6109 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:33:55,550 p=6109 u=cisco n=ansible | TASK [IP and HSRP config for the subinterfaces] *********************************************************************************************************************************************************************
+2025-04-02 11:33:56,034 p=6109 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:33:56,035 p=6109 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:33:56,040 p=6123 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:33:56,044 p=6109 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:33:56,049 p=6126 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:33:56,522 p=6126 u=cisco n=p=6126 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:33:56,522 p=6123 u=cisco n=p=6123 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:33:58,795 p=6123 u=cisco n=p=6123 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:33:58,795 p=6126 u=cisco n=p=6126 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-02 11:33:58,797 p=6123 u=cisco n=p=6123 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:33:58,797 p=6126 u=cisco n=p=6126 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:33:58,804 p=6109 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"changed": false, "msg": "Failed to authenticate: Authentication failed."}
+2025-04-02 11:33:58,806 p=6109 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"changed": false, "msg": "Failed to authenticate: Authentication failed."}
+2025-04-02 11:33:58,807 p=6109 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:33:58,810 p=6109 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:33:58,810 p=6109 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:33:58,907 p=6126 u=cisco n=ansible | shutdown complete
+2025-04-02 11:33:58,908 p=6123 u=cisco n=ansible | shutdown complete
+2025-04-02 11:38:41,621 p=6168 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:38:41,632 p=6168 u=cisco n=ansible | TASK [IP and HSRP config for the subinterfaces] *********************************************************************************************************************************************************************
+2025-04-02 11:38:42,101 p=6168 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:38:42,102 p=6168 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:38:42,107 p=6178 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:38:42,113 p=6178 u=cisco n=p=6178 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:38:43,968 p=6168 u=cisco n=ansible |  [ERROR]: User interrupted execution
+
+2025-04-02 11:38:44,388 p=6178 u=cisco n=p=6178 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:38:44,390 p=6178 u=cisco n=p=6178 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:38:44,495 p=6178 u=cisco n=ansible | shutdown complete
+2025-04-02 11:38:46,100 p=6181 u=cisco n=ansible | PLAY [HSRP config. on routers] **************************************************************************************************************************************************************************************
+2025-04-02 11:38:46,110 p=6181 u=cisco n=ansible | TASK [IP and HSRP config for the subinterfaces] *********************************************************************************************************************************************************************
+2025-04-02 11:38:46,576 p=6181 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-02 11:38:46,577 p=6181 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-02 11:38:46,581 p=6191 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-02 11:38:46,588 p=6191 u=cisco n=p=6191 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-02 11:38:48,863 p=6191 u=cisco n=p=6191 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-02 11:38:48,865 p=6191 u=cisco n=p=6191 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-02 11:38:48,872 p=6181 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"changed": false, "msg": "Failed to authenticate: Authentication failed."}
+2025-04-02 11:38:48,874 p=6181 u=cisco n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************
+2025-04-02 11:38:48,874 p=6181 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-02 11:38:48,974 p=6191 u=cisco n=ansible | shutdown complete
+2025-04-04 10:17:36,390 p=10452 u=cisco n=ansible | PLAY [HSRP config] *******************************************************************************************************************************************
+2025-04-04 10:17:36,509 p=10452 u=cisco n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-04-04 10:17:37,093 p=10452 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-04 10:17:37,094 p=10452 u=cisco n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2025-04-04 10:17:37,321 p=10452 u=cisco n=ansible | network_os is set to cisco.ios.ios
+2025-04-04 10:17:38,104 p=10466 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-04 10:17:38,224 p=10478 u=cisco n=ansible | [DEPRECATION WARNING]: PlayContext.verbosity is deprecated, use 
+ansible.utils.display.Display.verbosity instead. This feature will be removed 
+in version 2.18. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-04-04 10:17:38,598 p=10478 u=cisco n=p=10478 u=cisco | paramiko [192.168.99.2] | Connected (version 2.0, client Cisco-1.25)
+2025-04-04 10:17:38,598 p=10466 u=cisco n=p=10466 u=cisco | paramiko [192.168.99.1] | Connected (version 2.0, client Cisco-1.25)
+2025-04-04 10:17:40,872 p=10466 u=cisco n=p=10466 u=cisco | paramiko [192.168.99.1] | Authentication (publickey) failed.
+2025-04-04 10:17:40,873 p=10478 u=cisco n=p=10478 u=cisco | paramiko [192.168.99.2] | Authentication (publickey) failed.
+2025-04-04 10:17:40,874 p=10466 u=cisco n=p=10466 u=cisco | paramiko [192.168.99.1] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-04 10:17:40,878 p=10478 u=cisco n=p=10478 u=cisco | paramiko [192.168.99.2] | Disconnect (code 2): Protocol error: expected packet type 50, got 5
+2025-04-04 10:17:40,911 p=10452 u=cisco n=ansible | fatal: [Router1]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"cisco.ios.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: cisco.ios.ios_facts\n"}
+2025-04-04 10:17:40,913 p=10452 u=cisco n=ansible | fatal: [Router2]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"cisco.ios.ios_facts": {"failed": true, "invocation": {"module_args": {"available_network_resources": false, "gather_network_resources": null, "gather_subset": ["min"]}}, "msg": "Failed to authenticate: Authentication failed."}}, "msg": "The following modules failed to execute: cisco.ios.ios_facts\n"}
+2025-04-04 10:17:40,913 p=10452 u=cisco n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-04-04 10:17:40,914 p=10452 u=cisco n=ansible | Router1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-04 10:17:40,914 p=10452 u=cisco n=ansible | Router2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-04 10:18:10,878 p=10466 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-04 10:18:10,882 p=10478 u=cisco n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2025-04-04 10:18:10,980 p=10466 u=cisco n=ansible | shutdown complete
+2025-04-04 10:18:10,983 p=10478 u=cisco n=ansible | shutdown complete

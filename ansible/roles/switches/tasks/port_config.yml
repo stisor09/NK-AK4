@@ -1,0 +1,27 @@
+- name: Configure ports on Switches
+  hosts: switches
+  gather_facts: no
+  collections:
+    - cisco.ios
+  tasks:
+    - name: Configure port FastEthernet0/3 for VLAN 10
+      ios_config:
+        parents: interface FastEthernet0/3
+        lines:
+          - switchport mode access
+          - switchport access vlan 10
+
+    - name: Configure port FastEthernet0/4 for VLAN 20
+      ios_config:
+        parents: interface FastEthernet0/4
+        lines:
+          - switchport mode access
+          - switchport access vlan 20
+
+    - name: Configure trunk ports to Routers on Layer2Switch1
+      when: inventory_hostname == 'Layer2Switch1'
+      ios_config:
+        parents: interface range FastEthernet0/1 - 2
+        lines:
+          - switchport mode trunk
+

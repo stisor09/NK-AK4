@@ -1,3 +1,6 @@
+##
+#Since this is a Layer 3 switch, it will be using its' routing capabilities.
+##
 import serial
 import time
 import getpass
@@ -17,21 +20,23 @@ except Exception as e:
 	print('Serial connection failed')
 	exit(1)	
 
-username= input('Enter new username: ')
-password= getpass.getpass('Enter new password: ')
-hostname= input('Enter new hostname: ')
-mgmt_con= input('Enter the port for Management connection (i.e FastEthernet/GigaEthernet): ')
-address = input('Enter new IP + mask address for management port: ')
-netport1= input('Enter the interface of your first network: ')
-network1= input('Enter the IP address for your network: ')
-netport2= input('Enter the interface of your second network: ')
-network2= input('Enter the IP address for your network: ')
-domain  = input('Enter new device domain: ')
-crypto	= input('Enter new crypto key bit size: ')
-routerid= input('Enter your OSPF router ID (x.x.x.x): ')
-ospf1   = input('Input your first OSPF network command for routing (network NetID area X): ')
-ospf2   = input('Input your second OSPF network command for routing (network NetID area X): ') 
-ospf3   = input('Input your last OSPF network command for routing ((network NetID area X): ')
+username= input('Enter new username: ')								#Enter the username of your SSH login
+password= getpass.getpass('Enter new password: ')						#Enter the password of your SSH login
+hostname= input('Enter new hostname: ')								#Enter the new hostname of the device
+mgmt_con= input('Enter the port for Management connection (i.e FastEthernet/GigaEthernet): ')	#Here, you enter in the port on the switch you will use for management connections.
+address = input('Enter new IP + mask address for management port: ')				#Here, you enter in the IP addressing for that port.
+netport1= input('Enter the interface of your first network: ')					#Here, you enter in the first network port you are going to use.
+network1= input('Enter the IP address for your network: ')					#Here, you enter in the IP addressing for that port.
+netport2= input('Enter the interface of your second network: ')					#Here, you enter in the second network port you are going to use.
+network2= input('Enter the IP address for your network: ')					#Here, you enter in the IP addressing for that port.
+domain  = input('Enter new device domain: ')							#Enter the domain your device is located in
+crypto	= input('Enter new crypto key bit size: ')						#Enter the RSA key size (Minimum 2048)
+routerid= input('Enter your OSPF router ID (x.x.x.x): ')					#Enter the OSPF Router ID for this device. Can be any number, not an IP address. Must be unique.
+ospf1   = input('Input your first OSPF network command for routing (network NetID area X): ')	#Enter an adjacent network to your switch
+ospf2   = input('Input your second OSPF network command for routing (network NetID area X): ') 	#Enter an adjacent network to your switch #(e.g an address with 10.0.0.0 255.255.255.252 would be: network 10.0.0.0 0.0.0.3 area X)
+ospf3   = input('Input your last OSPF network command for routing ((network NetID area X): ')	#Enter an adjacent network to your switch
+
+
 if ser.is_open:
 	print('Connected')
 	

@@ -33,22 +33,26 @@ else:											#Enter all the ports that will be used on this device, purely fo
 	trunk = ''
 	vlans = ''
 vlans	= input('Enter your vlans for trunking: ')					#This assumes you use gig0/1 to connect to another switch, to trunk specific vlans to the opposing port.
-gateway = input('Set default gateway for the switch(IP address): ')			#The default IP address the layer 2 switch will use for SSH connections.
+gateway = input('Set default gateway for the switch(IP address): ')			#The default IP address the layer 2 switch will use for SSH connections. It is best practice to have it altered to your HSRP address if you use it.
 
 
 custom_ports = []
-port_custom = input('Configure specific port? (y/n): ').lower()                         #Configuring a specific port
+port_custom = input('Configure specific port? (y/n): ').lower()                         #Configuring a specific port with either trunk/access and its' VLAN.
 while port_custom == 'y':
         custom_port = input('Enter port to configure (FastEthernet/GigbitEthernet x/x): ')
         port_mode = input('Set port mode (access/trunk): ').lower()
         vlan_id = input('Enter VLAN for this port: ')
         custom_ports.append((custom_port, port_mode, vlan_id))
         port_custom = input('Configure another port? (y/n): ').lower()
-
+##
+#Saying "y" here will add one more port that will be configured in trunk mode with your "vlans" input.
+##
 extra_trunk = input('Do you want to configure an extra trunk interface? (y/n): ').lower()
 if extra_trunk == 'y':
         extra_trunk_iface = input('Enter the extra trunk interface (e.g., GigabitEthernet0/1): ')
-
+##
+#Here, the command gets run sequentially from top to bottom. It includes your previous inputs from "username" all the way down to "ospf3".
+##
 if ser.is_open:
 	print('Connected')
 	

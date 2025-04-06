@@ -9,7 +9,7 @@ def send_command(cmd, wait=1):
         output = ser.read(ser.in_waiting).decode('utf-8', errors='ignore')
         print (output)
 
-serial_port = input('Enter used serial port /dev/ttyS* or COM*: ')
+serial_port = input('Enter used serial port /dev/ttyS* or COM*: ')							#Here, you enter the portnumber you use to connect to the router to run the script.
 
 try:
         ser = serial.Serial(port=serial_port, baudrate=9600, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
@@ -18,22 +18,24 @@ except Exception as e:
         print('Serial connection failed')
         exit(1)
 
-username = input('Enter new username: ')
-password = getpass.getpass('Enter new password: ')
-hostname = input('Enter new hostname (RouterX): ')
-interface_lan = input('Enter your device LAN interface(and/or subinterface): ')
-address_LAN = input('Enter new IP + mask address for the LAN port: ')
-interface_wan = input('Enter your device WAN interface(and/or subinterface): ')
-address_WAN = input('Enter new IP + mask address for the WAN port: ')
-domain = input('Enter new device domain: ')
-crypto = input('Enter new crypto key bit size: ')
-routerid= input('Enter your OSPF router ID (x.x.x.x): ')
-ospf1   = input('Input your first OSPF network command for routing (network NetID area X or press enter to skip): ')
-ospf2   = input('Input your second OSPF network command for routing (network NetID area X or press enter to skip): ')
-ospf3   = input('Input your last OSPF network command for routing (network NetID area X or press enter to skip): ')
+username = input('Enter new username: ')										#Enter the username of your SSH login
+password = getpass.getpass('Enter new password: ')									#Enter the password of your SSH login
+hostname = input('Enter new hostname (RouterX): ')									#Enter the new hostname of the device
+interface_lan = input('Enter your device LAN interface(and/or subinterface): ')						#Here, you will enter in the port you will use as a LAN interface
+address_LAN = input('Enter new IP + mask address for the LAN port: ')							#Here, you will enter in the addressing of that LAN interface
+interface_wan = input('Enter your device WAN interface(and/or subinterface): ')						#Here, you will enter in the port you will use as a WAN interface
+address_WAN = input('Enter new IP + mask address for the WAN port: ')							#Here, you will enter in the addressing of that WAN interface.
+domain = input('Enter new device domain: ')										#Enter the domain your device is located in
+crypto = input('Enter new crypto key bit size: ')									#Enter the RSA key size (Minimum 2048)
+routerid= input('Enter your OSPF router ID (x.x.x.x): ')								#Enter the OSPF Router ID for this device. Can be any number, not an IP address. Must be unique.
+ospf1   = input('Input your first OSPF network command for routing (network NetID area X or press enter to skip): ')	#Enter an adjacent network to your router
+ospf2   = input('Input your second OSPF network command for routing (network NetID area X or press enter to skip): ')	#Enter an adjacent network to your router #(e.g an address with 10.0.0.0 255.255.255.252 would be: network 10.0.0.0 0.0.0.3 area X)
+ospf3   = input('Input your last OSPF network command for routing (network NetID area X or press enter to skip): ')	#Enter an adjacent network to your router
 
 lan_subinterfaces = []
-
+##
+# This part lets you add and configure consecutive interfaces on your LAN port. If your interface contains a "." which usually happens with subinterfaces, you get prompted with an encapsulation choice for the VLAN it will use.
+##
 while True:
 	interface_lan = input('Enter your LAN interface (e.g., Gig0/0/1.10): ')
 	address_LAN = input('Enter IP + mask address for this LAN subinterface: ')
@@ -51,7 +53,9 @@ while True:
 	another = input('Add another LAN subinterface? (y/n): ').lower()
 	if another != 'y':
 		break
-
+##
+#Here, the command gets run sequentially from top to bottom. It includes your previous inputs from "username" all the way down to "ospf3".
+##
 if ser.is_open:
 	print('Connected')
 

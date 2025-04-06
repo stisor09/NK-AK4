@@ -36,7 +36,9 @@ ospf1   = input('Input your first OSPF network command for routing (network NetI
 ospf2   = input('Input your second OSPF network command for routing (network NetID area X): ') 	#Enter an adjacent network to your switch #(e.g an address with 10.0.0.0 255.255.255.252 would be: network 10.0.0.0 0.0.0.3 area X)
 ospf3   = input('Input your last OSPF network command for routing ((network NetID area X): ')	#Enter an adjacent network to your switch
 
-
+##
+#Here, the command gets run sequentially from top to bottom. It includes your previous inputs from "username" all the way down to "ospf3".
+##
 if ser.is_open:
 	print('Connected')
 	

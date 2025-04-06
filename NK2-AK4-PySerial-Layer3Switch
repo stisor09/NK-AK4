@@ -11,7 +11,7 @@ def send_command(cmd, wait=1):
 	time.sleep(wait)
 	output = ser.read(ser.in_waiting).decode('utf-8', errors='ignore')
 	print (output)
-serial_port= input('Enter used serial port (/dev/ttyS* or COM*: ')
+serial_port= input('Enter used serial port (/dev/ttyS* or COM*: ')				#Here, you enter the portnumber you use to connect to the router to run the script.
 
 try:
 	ser = serial.Serial(port=serial_port, baudrate=9600, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
